@@ -1,0 +1,47 @@
+# ========================= Data Files (too large for GitHub) =========================
+fakenews 2.csv
+News _dataset/
+glove.6B.100d.txt
+glove.6B.zip
+
+# ========================= Python =========================
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# ========================= Generated Outputs =========================
+outputs/
+fakenews——result/
+
+# ========================= Reference Materials (not our code) =========================
+DITFEND/
+L-Defense_EFND/
+with-new-data.ipynb
+*.html
+真假新闻分类项目99%正确率全流程详解（附原理_代码_部署）-CSDN博客_files/
+虚假新闻检测：CSV格式数据集的预处理与模型选择_kaggle真假新闻分类-CSDN博客_files/
+虚假新闻检测（DITFEND）《Improving Fake News Detection of Influential Domain via Domain- and Instance-Level Transfer》 - 别关注我了，私信我吧 - 博客园_files/
+虚假新闻检测（DITFEND）《Improving Fake News Detection of Influential Domain via Domain- and Instance-Level Transfer》 - 别关注我了，私信我吧 - 博客园_files copy/
+
+# ========================= Temporary / Working Files =========================
+test_quick.py
+FakeNewsDetection_Colab copy.ipynb
+CDS525 - Group Project Instruction_2026 (7).docx
+
+# ========================= IDE / OS =========================
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ========================= Virtual Environment =========================
+venv/
+.env/
+env/
