@@ -316,16 +316,6 @@ accelerate
 
 ---
 
-## References
-
-- **GloVe**: Pennington et al., "GloVe: Global Vectors for Word Representation", EMNLP 2014
-- **EDA**: Jason Wei & Kai Zou, "EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks", 2019
-- **DistilBERT**: Sanh et al., "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter", NeurIPS 2019 Workshop
-- **Focal Loss**: Lin et al., "Focal Loss for Dense Object Detection", ICCV 2017
-- **Dataset**: Clément Bisaillon, "Fake and Real News Dataset", Kaggle
-
----
-
 ## License
 
 This project is for academic purposes (CDS525 Course Project).
