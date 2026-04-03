@@ -6,3 +6,18 @@ matplotlib>=3.7.0
 seaborn>=0.12.0
 nltk>=3.8.0
 tqdm>=4.65.0
+
+# Group 2: LLM experiments
+transformers>=4.35.0
+accelerate>=0.24.0
+
+# Group 3: Multi-agent (optional - install as needed)
+# openai>=1.0.0
+# tavily-python>=0.3.0
+# serpapi>=0.1.0
+
+# Group 4: KG + RL (optional)
+# stable-baselines3>=2.0.0
+
+# Group 5: MMDFND (see MMDFND/requirements.txt for full list)
+timm>=0.9.0

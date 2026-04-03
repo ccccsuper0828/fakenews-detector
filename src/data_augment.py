@@ -229,4 +229,4 @@ def augment_dataset(X_train, y_train, num_aug=1, seed=42):
     print(f"    数据增强: {orig_size} → {len(X_aug)} "
           f"(+{len(X_aug) - orig_size} 条增强样本)")
 
-    return np.array(X_aug), np.array(y_aug)
+    return np.array(X_aug, dtype=object), np.array(y_aug)

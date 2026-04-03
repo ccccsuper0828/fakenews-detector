@@ -277,8 +277,10 @@ def load_and_preprocess_multi_data(csv_path, extra_dataset_dir=None,
             X_train, y_train, num_aug=num_aug, seed=random_state
         )
         print(f"  增强后训练集: {len(X_train)}")
+    print(f"  数据加载完成, 开始构建词汇表和加载嵌入向量...")
 
     # 8. 构建词汇表 (仅基于训练集)
+    print(f"  构建词汇表 (从 {len(X_train)} 条文本中)...")
     vocab = Vocabulary(max_vocab_size)
     vocab.build(X_train)
     print(f"  词汇表大小: {vocab.vocab_size}")
@@ -305,15 +307,19 @@ def load_glove_embeddings(glove_path, vocab, embed_dim=100):
         embedding_matrix: (vocab_size, embed_dim) 的 torch.Tensor
         coverage: 词汇表中有GloVe向量的词的比例
     """
-    print(f"  加载GloVe词向量: {glove_path}")
+    print(f"  加载GloVe词向量: {glove_path} (347MB, 请等待约30秒)...")
 
     # 1. 读取GloVe文件
     glove_dict = {}
+    line_count = 0
     with open(glove_path, 'r', encoding='utf-8') as f:
         for line in f:
+            line_count += 1
+            if line_count % 100000 == 0:
+                print(f"    已读取 {line_count//1000}K 行, 匹配 {len(glove_dict)} 词...")
             values = line.split()
             word = values[0]
-            if word in vocab.word2idx:  # 只加载词汇表中的词
+            if word in vocab.word2idx:
                 vector = np.array(values[1:], dtype=np.float32)
                 if len(vector) == embed_dim:
                     glove_dict[word] = vector
